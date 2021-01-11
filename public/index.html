@@ -12,11 +12,11 @@
         <h1>ToDo's</h1>
         <form v-on:submit.prevent="saveNewTask">
             <label for="new-task"></label>
-            <input type="text" id="new-task" v-model="newTask">
+            <input type="text" id="new-task" v-model="newTask" required>
             <label for="high">High</label>
-            <input type="radio" id="high" value="high" v-model="newTaskPriority">
+            <input type="radio" name="priority" id="high" value="high" v-model="newTaskPriority" required>
             <label for="low">Low</label>
-            <input type="radio" id="low" value="low" v-model="newTaskPriority">
+            <input type="radio" name="priority" id="low" value="low" v-model="newTaskPriority">
             <input type="submit" value="Save Task">
         </form>
         <ul>
