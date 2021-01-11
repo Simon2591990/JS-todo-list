@@ -17,10 +17,12 @@
             <input type="radio" name="priority" id="high" value="high" v-model="newTaskPriority" required>
             <label for="low">Low</label>
             <input type="radio" name="priority" id="low" value="low" v-model="newTaskPriority">
-            <input type="submit" value="Save Task">
+            <button type="submit" >Save Task</button>
         </form>
         <ul>
-            <li v-for="task in tasks">{{ task.taskName }}</li>
+            <li v-for="task in tasks" v-bind:class="task.priority">
+                {{ task.taskName }}
+            </li>
         </ul>
     </div>
 </body>
