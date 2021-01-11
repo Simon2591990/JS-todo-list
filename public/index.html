@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="styleshee" href=".css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/bundle.js"></script>
 </head>
 <body>
-    <h1>Hello World</h1>
-    
+    <div id="app">
+        <h1>ToDo's</h1>
+        <form v-on:submit.prevent="saveNewTask">
+            <label for="new-task"></label>
+            <input type="text" id="new-task" v-model="newTask">
+            <input type="submit" value="Save Task">
+        </form>
+        <ul>
+            <li v-for="task in tasks">{{ task }}</li>
+        </ul>
+    </div>
 </body>
 </html>
