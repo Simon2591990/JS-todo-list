@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saveNewTask: function() {
             this.tasks.push({name: this.newTask, priority: this.newTaskPriority});
             this.newTask = ""
+            this.newTaskPriority = ""
         }
     }
     })
